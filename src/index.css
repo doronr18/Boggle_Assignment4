@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components{
+    .unPressed{
+        @apply bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 border-b-4 border-red-900 hover:border-red-700 rounded
+    }
+
+    .pressed{
+        @apply bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 border-b-4 border-gray-800 hover:border-gray-700 rounded
+    }
+
+    .circle{
+        @apply w-24 h-24 bg-red-600 rounded-full
+        
+    }
+
+    .border-gradient-br-blue-green-gray-900 {
+        background: linear-gradient(to right, #18181B, #18181B),
+          linear-gradient(to bottom right, #FFFFFF, #FF0000);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+      }
+      
+      .hover\:border-gradient-tl-blue-green-gray-900:hover {
+        background: linear-gradient(to right, #18181B, #18181B),
+          linear-gradient(to top left, #FFFFFF, #FF0000);
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+      }
+      
+      .gradient-border-3 {
+        border: 3px solid transparent;
+      }
 }
